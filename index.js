@@ -40,7 +40,7 @@ app.post('/api/authenticate', validateUserID, (req, res) => {
   if(user.password === password) {
     res.json({ message: 'Authentication successful', userData: user});
   } else {
-    res.status(401).json({error:'Incorrect Password'});
+    res.status(401).json({error:'Invalid User'});
   }
 
 });
